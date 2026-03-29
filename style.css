@@ -707,6 +707,13 @@ ul { list-style: none; }
 .feat-no--light { color: rgba(255,255,255,0.35); text-decoration: line-through; }
 .feat-no--light::before { color: rgba(255,255,255,0.3); }
 
+.pricing-footer-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 28px;
+}
+
 /* ════════════════════════════════
    TRUST SECTION
 ════════════════════════════════ */
