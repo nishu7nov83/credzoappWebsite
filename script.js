@@ -84,20 +84,11 @@ styleTag.textContent = `
 `;
 document.head.appendChild(styleTag);
 
-/* ─── EmailJS ─── */
-// Replace the three values below after setting up your EmailJS account.
-// Setup guide: https://www.emailjs.com/docs/tutorial/overview/
-//   1. Sign up at https://www.emailjs.com (free)
-//   2. Add an Email Service (Gmail / SMTP) → copy the Service ID
-//   3. Create an Email Template with variables:
-//      {{from_name}}, {{from_email}}, {{phone}}, {{subject}}, {{message}}
-//      Set "To Email" in the template to support@credzoapp.com
-//   4. Go to Account → API Keys → copy your Public Key
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'abc123XYZ'
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_xxxxxx'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xxxxxx'
-
-emailjs.init(EMAILJS_PUBLIC_KEY);
+/* ─── Web3Forms ─── */
+// To activate: go to https://web3forms.com/
+// Enter support@credzoapp.com → you'll receive an Access Key by email.
+// Paste it below. That's all.
+const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY';
 
 /* ─── Contact Form Validation & Submit ─── */
 const form = document.getElementById('contactForm');
@@ -188,20 +179,28 @@ form.addEventListener('submit', async (e) => {
   btnLoading.style.display = 'inline';
 
   try {
-    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      from_name:  `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
-      from_email: document.getElementById('email').value.trim(),
-      phone:      document.getElementById('phone').value.trim() || 'Not provided',
-      subject:    document.getElementById('subject').value,
-      message:    document.getElementById('message').value.trim(),
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name:    `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
+        email:   document.getElementById('email').value.trim(),
+        phone:   document.getElementById('phone').value.trim() || 'Not provided',
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value.trim(),
+      }),
     });
+
+    const data = await res.json();
+    if (!data.success) throw new Error(data.message);
 
     form.reset();
     submitBtn.style.display = 'none';
     formSuccess.style.display = 'flex';
     formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   } catch (err) {
-    console.error('EmailJS error:', err);
+    console.error('Form error:', err);
     btnText.style.display = 'inline';
     btnLoading.style.display = 'none';
     submitBtn.disabled = false;
