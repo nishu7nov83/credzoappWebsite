@@ -84,6 +84,21 @@ styleTag.textContent = `
 `;
 document.head.appendChild(styleTag);
 
+/* ─── EmailJS ─── */
+// Replace the three values below after setting up your EmailJS account.
+// Setup guide: https://www.emailjs.com/docs/tutorial/overview/
+//   1. Sign up at https://www.emailjs.com (free)
+//   2. Add an Email Service (Gmail / SMTP) → copy the Service ID
+//   3. Create an Email Template with variables:
+//      {{from_name}}, {{from_email}}, {{phone}}, {{subject}}, {{message}}
+//      Set "To Email" in the template to support@credzoapp.com
+//   4. Go to Account → API Keys → copy your Public Key
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'abc123XYZ'
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_xxxxxx'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xxxxxx'
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
 /* ─── Contact Form Validation & Submit ─── */
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
@@ -165,7 +180,6 @@ form.addEventListener('submit', async (e) => {
   const allValid = Object.keys(validators).every(key => validateField(key));
   if (!allValid) return;
 
-  // Simulate sending (replace with actual API call)
   const btnText = submitBtn.querySelector('.btn-text');
   const btnLoading = submitBtn.querySelector('.btn-loading');
 
@@ -173,16 +187,26 @@ form.addEventListener('submit', async (e) => {
   btnText.style.display = 'none';
   btnLoading.style.display = 'inline';
 
-  // Simulate async delay (replace with fetch/axios to real endpoint)
-  await new Promise(resolve => setTimeout(resolve, 1800));
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      from_name:  `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
+      from_email: document.getElementById('email').value.trim(),
+      phone:      document.getElementById('phone').value.trim() || 'Not provided',
+      subject:    document.getElementById('subject').value,
+      message:    document.getElementById('message').value.trim(),
+    });
 
-  // Show success
-  form.reset();
-  submitBtn.style.display = 'none';
-  formSuccess.style.display = 'flex';
-
-  // Scroll success into view
-  formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    form.reset();
+    submitBtn.style.display = 'none';
+    formSuccess.style.display = 'flex';
+    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } catch (err) {
+    console.error('EmailJS error:', err);
+    btnText.style.display = 'inline';
+    btnLoading.style.display = 'none';
+    submitBtn.disabled = false;
+    alert('Failed to send message. Please email us directly at support@credzoapp.com');
+  }
 });
 
 /* ─── Pricing card hover ─── */
