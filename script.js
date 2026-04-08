@@ -178,22 +178,18 @@ form.addEventListener('submit', async (e) => {
   btnText.style.display = 'none';
   btnLoading.style.display = 'inline';
 
+  const formData = new FormData(form);
+  formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+  formData.append('name', `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`);
+
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_ACCESS_KEY,
-        name:    `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
-        email:   document.getElementById('email').value.trim(),
-        phone:   document.getElementById('phone').value.trim() || 'Not provided',
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value.trim(),
-      }),
+      body: formData,
     });
 
     const data = await res.json();
-    if (!data.success) throw new Error(data.message);
+    if (!res.ok) throw new Error(data.message);
 
     form.reset();
     btnLoading.style.display = 'none';
