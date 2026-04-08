@@ -896,6 +896,11 @@ ul { list-style: none; }
 }
 
 .btn-submit { font-size: 15px; padding: 15px; }
+.btn-submit.btn-success {
+  background: var(--green);
+  box-shadow: 0 4px 20px rgba(52, 199, 89, 0.35);
+  pointer-events: none;
+}
 
 .form-success {
   display: flex;

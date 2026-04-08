@@ -196,9 +196,10 @@ form.addEventListener('submit', async (e) => {
     if (!data.success) throw new Error(data.message);
 
     form.reset();
-    submitBtn.style.display = 'none';
-    formSuccess.style.display = 'flex';
-    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    btnLoading.style.display = 'none';
+    btnText.textContent = '✓';
+    btnText.style.display = 'inline';
+    submitBtn.classList.add('btn-success');
   } catch (err) {
     console.error('Form error:', err);
     btnText.style.display = 'inline';
