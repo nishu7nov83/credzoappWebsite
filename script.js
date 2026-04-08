@@ -88,7 +88,7 @@ document.head.appendChild(styleTag);
 // To activate: go to https://web3forms.com/
 // Enter support@credzoapp.com → you'll receive an Access Key by email.
 // Paste it below. That's all.
-const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY';
+const WEB3FORMS_ACCESS_KEY = '952e821e-0c6c-4163-8b35-72cd3532641d';
 
 /* ─── Contact Form Validation & Submit ─── */
 const form = document.getElementById('contactForm');
@@ -226,8 +226,8 @@ document.querySelectorAll('.pricing-card').forEach(card => {
 const activeStyle = document.createElement('style');
 activeStyle.textContent = `
   .nav-links a.active {
-    color: var(--purple);
-    background: var(--purple-light);
+    color: var(--blue);
+    background: var(--blue-light);
   }
 `;
 document.head.appendChild(activeStyle);
