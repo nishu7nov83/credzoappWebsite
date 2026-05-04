@@ -157,7 +157,7 @@ export default function AccountDeletion() {
           {/* Step 1: Enter email */}
           {step === 1 && (
             <div>
-              <h3 className="step-title">Enter Your Email</h3>
+              <h2 className="step-title">Enter Your Email</h2>
               <p className="step-subtitle">
                 Enter the email address associated with your Credzo account.
                 We'll send a verification code to confirm your identity.
@@ -184,7 +184,7 @@ export default function AccountDeletion() {
           {/* Step 2: Enter OTP */}
           {step === 2 && (
             <div>
-              <h3 className="step-title">Verify Your Identity</h3>
+              <h2 className="step-title">Verify Your Identity</h2>
               <p className="step-subtitle">
                 Enter the 6-digit code sent to <strong>{email.trim().toLowerCase()}</strong>
               </p>
@@ -223,14 +223,14 @@ export default function AccountDeletion() {
           {step === 3 && (
             <div>
               <div className="success-icon-large">&#10003;</div>
-              <h3 className="success-title">Request Submitted</h3>
+              <h2 className="success-title">Request Submitted</h2>
               <p className="success-text">
                 Your account deletion request has been received. We'll process it
                 within <strong>7 business days</strong> and send a confirmation email
                 once completed.
               </p>
               <div className="info-list">
-                <h4>What happens next?</h4>
+                <h3>What happens next?</h3>
                 <ul>
                   <li>All your expenses, credit cards, and budget data will be permanently deleted</li>
                   <li>Your membership and payment history will be removed</li>

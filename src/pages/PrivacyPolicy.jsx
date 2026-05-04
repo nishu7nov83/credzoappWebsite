@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
 
       <div className="policy-body">
         <div className="policy-toc">
-          <h3>Contents</h3>
+          <h2>Contents</h2>
           <ol>
             {sections.map((s) => (
               <li key={s.id}><a href={`#${s.id}`}>{s.title}</a></li>

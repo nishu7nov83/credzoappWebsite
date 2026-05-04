@@ -20,7 +20,7 @@ export default function Trust() {
               <div className="trust-icon" style={{ color: item.accent }}>
                 <item.Icon size={26} strokeWidth={1.8} />
               </div>
-              <h4>{item.title}</h4>
+              <h3>{item.title}</h3>
               <p>{item.desc}</p>
             </div>
           ))}
