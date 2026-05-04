@@ -14,15 +14,15 @@ export default function Footer() {
         <div className="footer-links">
           <div className="footer-col">
             <h4>Product</h4>
-            <Link to="/#features">Features</Link>
-            <Link to="/#pricing">Pricing</Link>
-            <Link to="/#about">How It Works</Link>
+            <a href="/#features">Features</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#about">How It Works</a>
           </div>
           <div className="footer-col">
             <h4>Plans</h4>
-            <Link to="/#pricing">Starter — Free</Link>
-            <Link to="/#pricing">Pro — ₹250/quarter</Link>
-            <Link to="/#pricing">Elite — ₹500/quarter</Link>
+            <a href="/#pricing">Starter — Free</a>
+            <a href="/#pricing">Pro — ₹250/quarter</a>
+            <a href="/#pricing">Elite — ₹500/quarter</a>
           </div>
           <div className="footer-col">
             <h4>Legal</h4>
