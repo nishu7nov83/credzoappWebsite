@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
 
       <section className="policy-hero">
         <div className="container">
-          <span className="last-updated">Last updated: March 30, 2026</span>
+          <span className="last-updated">Last updated: May 5, 2026</span>
           <h1>Privacy Policy</h1>
           <p>
             We take your privacy seriously. This policy explains exactly what data
@@ -58,8 +58,9 @@ export default function PrivacyPolicy() {
         <div className="highlight-box">
           <p>
             🔒 <strong>Short version:</strong> Credzo stores your expense data securely on our servers.
-            We never sell your data to third parties. SMS messages are read locally on your device
-            to detect transactions — the raw SMS text is never uploaded to our servers.
+            We never sell your data to third parties. With your permission, matched financial SMS
+            messages are transmitted over HTTPS to detect transactions — personal messages are never
+            read or stored.
           </p>
         </div>
 
@@ -109,22 +110,33 @@ export default function PrivacyPolicy() {
         <div className="policy-section" id="s3">
           <h2><span className="section-num">3</span> SMS &amp; Transaction Data</h2>
           <div className="warning-box">
-            <p>⚠️ The SMS auto-import feature is available on Android only and requires explicit permission from you before it is activated.</p>
+            <p>⚠️ The SMS auto-import feature is available on Android only and requires explicit permission (READ_SMS) from you before it is activated.</p>
           </div>
           <p>
-            When you grant SMS read permission, Credzo scans incoming SMS messages on your device
-            to detect bank transaction notifications. This process happens <strong>entirely on your device</strong>.
+            With your explicit permission (<strong>READ_SMS</strong>), the App reads SMS messages on your device
+            solely to detect bank and credit card transaction notifications sent by financial institutions.
+            Only messages from financial institution senders — such as 5-digit or alphanumeric bank short
+            codes (e.g., VM-HDFCBK, AD-ICICIB) — are processed. Personal SMS messages are never read,
+            accessed, or stored.
+          </p>
+          <p>
+            To enable automatic expense detection, the text content, sender address, and timestamp of
+            matched financial SMS messages are securely transmitted over HTTPS to our servers for
+            deduplication and transaction parsing. This data is used solely to extract transaction
+            amounts and merchant names for your expense tracking history. SMS data transmitted to our
+            servers is retained for as long as your account is active and is permanently deleted when
+            you delete your account.
           </p>
           <ul>
-            <li>Raw SMS message text is <strong>never</strong> uploaded to Credzo servers</li>
-            <li>Only the parsed transaction details (amount, merchant hint, date) are used to pre-fill an expense entry</li>
-            <li>You review and confirm each detected transaction before it is saved</li>
-            <li>Credzo stores a list of SMS IDs (numeric identifiers) locally on your device to avoid importing the same message twice — these IDs contain no personal content</li>
-            <li>You can revoke SMS permission at any time from your Android system settings</li>
+            <li>Only messages matching financial institution sender patterns are transmitted to our servers</li>
+            <li>Personal SMS messages are never read, accessed, or stored</li>
+            <li>All transmission uses HTTPS encryption</li>
+            <li>SMS data is used solely for expense auto-import and is never used for advertising</li>
+            <li>We do not sell or share SMS data with any third party</li>
           </ul>
           <p>
-            Credzo does not access SMS messages unrelated to bank transactions, and does not
-            read OTPs, personal conversations, or any non-financial messages.
+            You can revoke SMS permission at any time from your device settings (Settings → Apps → Credzo → Permissions).
+            The App will continue to function for manual expense entry without this permission.
           </p>
         </div>
 
@@ -170,7 +182,8 @@ export default function PrivacyPolicy() {
           <p>
             We retain your account and expense data for as long as your account is active.
             If you delete your account, all associated data — expenses, credit cards, budget
-            limits, membership history, and notification preferences — is <strong>permanently deleted</strong> from our systems within 30 days of account deletion.
+            limits, membership history, notification preferences, and any SMS transaction data
+            transmitted to our servers — is <strong>permanently deleted</strong> from our systems within 30 days of account deletion.
           </p>
           <p>
             Aggregated, anonymised usage statistics that cannot identify you may be retained
