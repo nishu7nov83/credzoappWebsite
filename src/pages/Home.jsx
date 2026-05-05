@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Credzo — Smart Expense Tracking</title>
+        <title>Credzo — Smart Expense Tracking &amp; Budget Management</title>
         <meta name="description" content="Credzo helps you track daily expenses, manage credit cards, set budgets, and gain insights into your spending — all in one place." />
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="expense tracker, credit card tracker, budget app, personal finance app, spending tracker, SMS auto-import, Android finance app, budget manager India" />
