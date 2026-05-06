@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Credzo | Track Your Spending</title>
+  <meta name="description" content="Credzo Privacy Policy — how we collect, use, and protect your data." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://credzoapp.com/privacy-policy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://credzoapp.com/privacy-policy" />
+  <meta property="og:title" content="Privacy Policy — Credzo" />
+  <meta property="og:description" content="Credzo Privacy Policy — how we collect, use, and protect your data." />
+  <meta property="og:image" content="https://credzoapp.com/CredzoLogo1.png" />
+  <meta property="og:site_name" content="Credzo" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Privacy Policy — Credzo" />
+  <meta name="twitter:description" content="Credzo Privacy Policy — how we collect, use, and protect your data." />
+  <meta name="twitter:image" content="https://credzoapp.com/CredzoLogo1.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f8faff; color: #1a1a2e; }
+    a { color: #4361ee; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    .nav { background: #fff; border-bottom: 1px solid #e8eaf6; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: #1a1a2e; text-decoration: none; }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-back { font-size: 14px; font-weight: 500; color: #4361ee; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #4361ee 0%, #1a1a2e 100%); padding: 80px 24px 56px; text-align: center; color: #fff; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 5px 16px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 900; margin-bottom: 16px; line-height: 1.15; }
+    .hero p { font-size: 16px; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+
+    /* Body */
+    .body { max-width: 780px; margin: 0 auto; padding: 64px 24px 96px; }
+
+    /* TOC */
+    .toc { background: #fff; border: 1px solid #e8eaf6; border-radius: 12px; padding: 28px 32px; margin-bottom: 48px; }
+    .toc h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #6b7280; margin-bottom: 16px; }
+    .toc ol { list-style: decimal; padding-left: 20px; columns: 2; column-gap: 24px; }
+    .toc li { font-size: 14px; margin-bottom: 8px; }
+    .toc li a { color: #4361ee; font-weight: 500; }
+
+    /* Highlight box */
+    .highlight { background: #eef2ff; border-left: 4px solid #4361ee; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 0 0 40px; }
+    .highlight p { font-size: 14px; color: #1a1a2e; font-weight: 500; line-height: 1.6; }
+
+    /* Warning box */
+    .warning { background: #fff8e1; border-left: 4px solid #f59e0b; border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0; }
+    .warning p { font-size: 14px; color: #5d4037; font-weight: 500; line-height: 1.6; }
+
+    /* Sections */
+    .section { margin-bottom: 48px; }
+    .section h2 { font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 2px solid #eef2ff; display: flex; align-items: center; gap: 10px; }
+    .section-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #eef2ff; color: #4361ee; border-radius: 7px; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+    .section p { font-size: 15px; color: #4b5563; line-height: 1.8; margin-bottom: 14px; }
+    .section ul, .section ol { margin: 0 0 14px 20px; }
+    .section ul { list-style: disc; }
+    .section li { font-size: 15px; color: #4b5563; line-height: 1.8; margin-bottom: 6px; }
+    .section strong { color: #1a1a2e; font-weight: 600; }
+
+    /* Contact box */
+    .contact-box { background: #fff; border: 1px solid #e8eaf6; border-radius: 12px; padding: 24px 28px; margin-top: 16px; }
+    .contact-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1a1a2e; }
+    .contact-box p { font-size: 14px; color: #4b5563; margin-bottom: 6px; line-height: 1.6; }
+
+    /* Footer */
+    .footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 24px; font-size: 14px; }
+    .footer a { color: rgba(255,255,255,0.8); }
+
+    @media (max-width: 600px) {
+      .toc ol { columns: 1; }
+      .body { padding: 40px 16px 72px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <img src="/CredzoLogo1.png" alt="Credzo logo" />
+      Credzo
+    </a>
+    <a href="/" class="nav-back">← Back to Home</a>
+  </nav>
+
+  <header class="hero">
+    <span class="hero-badge">Last updated: May 5, 2026</span>
+    <h1>Privacy Policy</h1>
+    <p>We take your privacy seriously. This policy explains exactly what data Credzo collects, how it is used, and the choices you have.</p>
+  </header>
+
+  <div class="body">
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">Information We Collect</a></li>
+        <li><a href="#s2">How We Use Your Information</a></li>
+        <li><a href="#s3">SMS &amp; Transaction Data</a></li>
+        <li><a href="#s4">Data Storage &amp; Security</a></li>
+        <li><a href="#s5">Data Sharing &amp; Third Parties</a></li>
+        <li><a href="#s6">Data Retention</a></li>
+        <li><a href="#s7">Your Rights &amp; Choices</a></li>
+        <li><a href="#s8">Children's Privacy</a></li>
+        <li><a href="#s9">Changes to This Policy</a></li>
+        <li><a href="#s10">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <div class="highlight">
+      <p>🔒 <strong>Short version:</strong> Credzo stores your expense data securely on our servers. We never sell your data to third parties. With your permission, matched financial SMS messages are transmitted over HTTPS to detect transactions — personal messages are never read or stored.</p>
+    </div>
+
+    <div class="section" id="s1">
+      <h2><span class="section-num">1</span> Information We Collect</h2>
+      <p>We collect the following categories of information when you use Credzo:</p>
+      <p><strong>Account Information</strong></p>
+      <ul>
+        <li>Name and email address (provided during registration)</li>
+        <li>Mobile number (optional, used for account identification)</li>
+        <li>Password (stored as a one-way BCrypt hash — never in plain text)</li>
+        <li>Profile photo (stored locally on your device only)</li>
+        <li>Preferred currency and language settings</li>
+      </ul>
+      <p><strong>Expense &amp; Financial Data</strong></p>
+      <ul>
+        <li>Expenses you manually enter: amount, category, description, date</li>
+        <li>Credit card details: card holder name, last four digits, card type, bank name, billing date, expiry month/year</li>
+        <li>Monthly budget limits (per category, per card, per billing period)</li>
+        <li>Fixed recurring expenses you set up</li>
+      </ul>
+      <p><strong>Usage &amp; Technical Data</strong></p>
+      <ul>
+        <li>Membership plan and upgrade request history</li>
+        <li>Notification preference settings</li>
+        <li>App version and build number (for support purposes)</li>
+      </ul>
+    </div>
+
+    <div class="section" id="s2">
+      <h2><span class="section-num">2</span> How We Use Your Information</h2>
+      <p>We use the information we collect exclusively to provide and improve the Credzo service:</p>
+      <ul>
+        <li><strong>Deliver core features</strong> — expense tracking, budget limits, reports, and analytics</li>
+        <li><strong>Authenticate your account</strong> — JWT-based sessions to keep your data private</li>
+        <li><strong>Send notifications</strong> — spending alerts and reminders at your chosen frequency</li>
+        <li><strong>Process membership upgrades</strong> — managing Pro and Elite plan access</li>
+        <li><strong>Provide customer support</strong> — responding to your enquiries via email</li>
+        <li><strong>Improve the app</strong> — understanding how features are used in aggregate, anonymised form</li>
+      </ul>
+      <p>We do <strong>not</strong> use your data for advertising, profiling for third parties, or any purpose beyond delivering the service described above.</p>
+    </div>
+
+    <div class="section" id="s3">
+      <h2><span class="section-num">3</span> SMS &amp; Transaction Data</h2>
+      <div class="warning">
+        <p>⚠️ The SMS auto-import feature is available on Android only and requires explicit permission (READ_SMS) from you before it is activated.</p>
+      </div>
+      <p>With your explicit permission (<strong>READ_SMS</strong>), the App reads SMS messages on your device solely to detect bank and credit card transaction notifications sent by financial institutions. Only messages from financial institution senders — such as 5-digit or alphanumeric bank short codes (e.g., VM-HDFCBK, AD-ICICIB) — are processed. Personal SMS messages are never read, accessed, or stored.</p>
+      <p>To enable automatic expense detection, the text content, sender address, and timestamp of matched financial SMS messages are securely transmitted over HTTPS to our servers for deduplication and transaction parsing. This data is used solely to extract transaction amounts and merchant names for your expense tracking history. SMS data transmitted to our servers is retained for as long as your account is active and is permanently deleted when you delete your account.</p>
+      <ul>
+        <li>Only messages matching financial institution sender patterns are transmitted to our servers</li>
+        <li>Personal SMS messages are never read, accessed, or stored</li>
+        <li>All transmission uses HTTPS encryption</li>
+        <li>SMS data is used solely for expense auto-import and is never used for advertising</li>
+        <li>We do not sell or share SMS data with any third party</li>
+      </ul>
+      <p>You can revoke SMS permission at any time from your device settings (Settings → Apps → Credzo → Permissions). The App will continue to function for manual expense entry without this permission.</p>
+    </div>
+
+    <div class="section" id="s4">
+      <h2><span class="section-num">4</span> Data Storage &amp; Security</h2>
+      <p>Your data is stored on secure servers. We implement the following technical safeguards:</p>
+      <ul>
+        <li><strong>Authentication</strong> — JSON Web Tokens (JWT) with 24-hour expiry for all API access</li>
+        <li><strong>Password hashing</strong> — BCrypt with a strong work factor; plain-text passwords are never stored or transmitted</li>
+        <li><strong>Transport security</strong> — All communication between the app and our servers uses HTTPS/TLS encryption</li>
+        <li><strong>Access control</strong> — Each user can only access their own data; all API endpoints are authenticated</li>
+        <li><strong>Stateless sessions</strong> — No server-side session state; tokens are validated on every request</li>
+      </ul>
+      <p>While we take commercially reasonable measures to protect your data, no method of electronic storage or transmission is 100% secure. We encourage you to use a strong, unique password for your Credzo account.</p>
+    </div>
+
+    <div class="section" id="s5">
+      <h2><span class="section-num">5</span> Data Sharing &amp; Third Parties</h2>
+      <p><strong>We do not sell your personal data.</strong> We do not share your data with advertisers, data brokers, or marketing companies.</p>
+      <p>We may share data only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers</strong> — Infrastructure and hosting providers that process data on our behalf under strict confidentiality agreements</li>
+        <li><strong>Legal requirements</strong> — If required by law, court order, or to protect the rights and safety of Credzo users</li>
+        <li><strong>Business transfer</strong> — In the event of a merger, acquisition, or sale of assets, user data may be transferred; we will notify you before this occurs</li>
+      </ul>
+      <p>The AI-powered Planner feature (Elite plan) may transmit your anonymised spending patterns to an AI inference service for generating personalised recommendations. No personally identifiable information (name, email, card details) is included in these requests.</p>
+    </div>
+
+    <div class="section" id="s6">
+      <h2><span class="section-num">6</span> Data Retention</h2>
+      <p>We retain your account and expense data for as long as your account is active. If you delete your account, all associated data — expenses, credit cards, budget limits, membership history, notification preferences, and any SMS transaction data transmitted to our servers — is <strong>permanently deleted</strong> from our systems within 30 days of account deletion.</p>
+      <p>Aggregated, anonymised usage statistics that cannot identify you may be retained indefinitely for product improvement purposes.</p>
+    </div>
+
+    <div class="section" id="s7">
+      <h2><span class="section-num">7</span> Your Rights &amp; Choices</h2>
+      <p>You have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access</strong> — View all your stored data directly within the Credzo app (Profile, Expenses, Reports)</li>
+        <li><strong>Correction</strong> — Update your expenses, card details, and budget limits at any time within the app</li>
+        <li><strong>Deletion</strong> — Delete your account and all associated data from Profile → Delete Account. This action is immediate and irreversible</li>
+        <li><strong>Data portability</strong> — Contact us at <a href="mailto:support@credzoapp.com">support@credzoapp.com</a> to request an export of your data in a machine-readable format</li>
+        <li><strong>SMS permission</strong> — Revoke Credzo's SMS access at any time via Android system settings (Settings → Apps → Credzo → Permissions)</li>
+        <li><strong>Notification opt-out</strong> — Disable all notifications via Profile → Notification Preferences within the app</li>
+      </ul>
+    </div>
+
+    <div class="section" id="s8">
+      <h2><span class="section-num">8</span> Children's Privacy</h2>
+      <p>Credzo is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us at <a href="mailto:support@credzoapp.com">support@credzoapp.com</a> and we will promptly delete it.</p>
+    </div>
+
+    <div class="section" id="s9">
+      <h2><span class="section-num">9</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify you via in-app notification or email.</p>
+      <p>Your continued use of Credzo after changes are posted constitutes your acceptance of the revised policy. We encourage you to review this page periodically.</p>
+    </div>
+
+    <div class="section" id="s10">
+      <h2><span class="section-num">10</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please reach out to us:</p>
+      <div class="contact-box">
+        <h3>Credzo Privacy Team</h3>
+        <p>📧 Email: <a href="mailto:support@credzoapp.com">support@credzoapp.com</a></p>
+        <p>📍 Location: India</p>
+        <p style="color: #9ca3af; font-size: 13px;">We aim to respond to all privacy-related enquiries within 48 hours.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Credzo. All rights reserved. &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="mailto:support@credzoapp.com">support@credzoapp.com</a></p>
+  </footer>
+
+</body>
+</html>
