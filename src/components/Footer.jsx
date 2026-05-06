@@ -26,8 +26,8 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <p className="footer-col-label">Legal</p>
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/account-deletion">Account Deletion</Link>
+            <Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)}>Privacy Policy</Link>
+            <Link to="/account-deletion" onClick={() => window.scrollTo(0, 0)}>Account Deletion</Link>
             <a href="mailto:support@credzoapp.com">support@credzoapp.com</a>
           </div>
           <div className="footer-col">
