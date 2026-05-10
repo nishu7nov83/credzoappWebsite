@@ -150,6 +150,29 @@ ul { list-style: none; }
 }
 .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(249, 168, 37, 0.45); }
 
+.btn-playstore {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #000;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition);
+  border: 1.5px solid rgba(255,255,255,0.12);
+}
+.btn-playstore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  background: #111;
+}
+.playstore-icon { width: 28px; height: 28px; flex-shrink: 0; }
+.playstore-text { display: flex; flex-direction: column; text-align: left; line-height: 1.2; }
+.playstore-label { font-size: 11px; font-weight: 400; opacity: 0.85; letter-spacing: 0.3px; }
+.playstore-name { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+
 .btn-full { width: 100%; }
 
 /* ─── Gradient text ─── */
@@ -221,6 +244,27 @@ ul { list-style: none; }
   box-shadow: 0 2px 12px rgba(0,122,255,0.3);
 }
 .nav-cta:hover { background: var(--indigo) !important; transform: translateY(-1px); }
+
+.nav-play {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  background: #000 !important;
+  color: #fff !important;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  transition: all var(--transition);
+}
+.nav-play:hover { background: #1a1a1a !important; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.35); }
+
+.mobile-play {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
 
 .hamburger {
   display: none;
@@ -330,6 +374,16 @@ ul { list-style: none; }
   color: var(--text-secondary);
   margin-bottom: 28px;
   box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+.hero-badge-link {
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.hero-badge-link:hover {
+  border-color: #34A853;
+  box-shadow: 0 2px 12px rgba(52, 168, 83, 0.2);
+  color: var(--text-secondary);
 }
 
 .badge-dot {
@@ -947,6 +1001,28 @@ a.contact-chip:hover { color: var(--blue); }
   margin-top: 12px;
   line-height: 1.5;
 }
+
+.footer-play-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 10px 18px;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+.footer-play-badge:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.28);
+  transform: translateY(-1px);
+}
+.footer-play-icon { width: 22px; height: 22px; flex-shrink: 0; }
+.footer-play-text { display: flex; flex-direction: column; text-align: left; line-height: 1.2; }
+.footer-play-label { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: 0.3px; }
+.footer-play-name { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: -0.2px; }
 
 .footer-col-label {
   font-size: 13px;
